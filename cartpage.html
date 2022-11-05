@@ -45,15 +45,17 @@
             align-items: center;
             font-family: sans-serif;
             justify-content: space-between;
-            
+
         }
-        #cart-head-const>span{
+
+        #cart-head-const>span {
             margin-right: 10%;
         }
-        #cart-head-const>span>p{
+
+        #cart-head-const>span>p {
             font-size: 15px;
-            color:grey;
-            
+            color: grey;
+
         }
 
         #cart-head-const img {
@@ -644,7 +646,7 @@
     <div id="cartpage-total-div">
 
         <div id="cart-head-const">
-            <a href="./index.html"></a> 
+            <a href="./index.html"></a>
             <span>Signed as:<p id="logedin-email"></p></span>
         </div>
 
@@ -811,9 +813,9 @@
 </html>
 
 <script>
-     var bag_discounted_amount = 0;
-     var sub_total_price = 0;
-     var total_price = 0;
+    var bag_discounted_amount = 0;
+    var sub_total_price = 0;
+    var total_price = 0;
 
     var p = document.querySelector("#select-value");
     console.log(p)
@@ -895,7 +897,7 @@
 
 
 
-var subTotalPrice = Math.floor(Number(n.price) - (Number(n.discount)/100)*n.price);
+            var subTotalPrice = Math.floor(Number(n.price) - (Number(n.discount) / 100) * n.price);
 
             var { name, image1, price } = n;
             var totaldiv = document.createElement("div")
@@ -1063,13 +1065,13 @@ var subTotalPrice = Math.floor(Number(n.price) - (Number(n.discount)/100)*n.pric
         //     return { price: a.price + b.price };
         // })
         // console.log(total_price);
-array.map((el)=>{
-var subTotalPrice = Math.floor(Number(el.price) - (Number(el.discount)/100)*el.price);
-sub_total_price += subTotalPrice;
-total_price += Number(el.price);
-})
+        array.map((el) => {
+            var subTotalPrice = Math.floor(Number(el.price) - (Number(el.discount) / 100) * el.price);
+            sub_total_price += subTotalPrice;
+            total_price += Number(el.price);
+        })
 
-console.log(total_price, 5541)
+        console.log(total_price, 5541)
 
 
         bag_discounted_amount = saved_amount_array.reduce((m, n) => {
@@ -1124,8 +1126,8 @@ console.log(total_price, 5541)
 
     document.querySelector("#coupoun-submit").addEventListener("click", coupountoogless)
 
-var flag = false;
-localStorage.setItem("flag", JSON.stringify(flag));
+    var flag = false;
+    localStorage.setItem("flag", JSON.stringify(flag));
 
     function coupountoogless() {
         var x = document.querySelector("#coupoun-text").value;
@@ -1135,29 +1137,29 @@ localStorage.setItem("flag", JSON.stringify(flag));
 
             flag = true;
             localStorage.setItem("flag", JSON.stringify(flag));
-        //     price_summary = {
-        //     price: sub_total_price,
-        //     bag_discount: bag_discounted_amount,
-        //     total: total_price,
-        // }
+            //     price_summary = {
+            //     price: sub_total_price,
+            //     bag_discount: bag_discounted_amount,
+            //     total: total_price,
+            // }
 
 
 
-        // <div>
-        //                             <p class="total_calculate_price">null</p>
-        //                             <p>FREE</p>
-        //                             <p class="bag-discount">0</p>
-        //                             <p class="Subtotal"></p>
-        //                         </div>
+            // <div>
+            //                             <p class="total_calculate_price">null</p>
+            //                             <p>FREE</p>
+            //                             <p class="bag-discount">0</p>
+            //                             <p class="Subtotal"></p>
+            //                         </div>
 
-            document.querySelector(".bag-discount").textContent ="₹ "+ (bag_discounted_amount + 100);
-            document.querySelector(".Subtotal").textContent = "₹" + (total_price-bag_discounted_amount-100);
+            document.querySelector(".bag-discount").textContent = "₹ " + (bag_discounted_amount + 100);
+            document.querySelector(".Subtotal").textContent = "₹" + (total_price - bag_discounted_amount - 100);
 
             document.querySelector("#saving-div").textContent = `You are saving ₹ ${bag_discounted_amount} on this order`
 
-            document.querySelector(".Grand-total-pay").textContent = "₹" + (total_price-bag_discounted_amount-100);
+            document.querySelector(".Grand-total-pay").textContent = "₹" + (total_price - bag_discounted_amount - 100);
             document.querySelector(".overlay").classList.remove('bg-active');
-            
+
         }
         else {
             alert("invalid coupoun")
@@ -1242,27 +1244,27 @@ localStorage.setItem("flag", JSON.stringify(flag));
     ]
 
 
-// //  {
-//     desc: "Jet Black Round Neck 3/4th Sleeve T-Shirt",
-//             subTotalPrice: 999,
-//             price: 1999,
-//             image: "https://images.bewakoof.com/t320/know-your-power-boyfriend-t-shirt-464873-1642404499-1.jpg",
-//         }
+    // //  {
+    //     desc: "Jet Black Round Neck 3/4th Sleeve T-Shirt",
+    //             subTotalPrice: 999,
+    //             price: 1999,
+    //             image: "https://images.bewakoof.com/t320/know-your-power-boyfriend-t-shirt-464873-1642404499-1.jpg",
+    //         }
 
 
-// {
-//     "id": "HST8",
-//     "name": "Gotham City Half Sleeve T-shirt",
-//     "price": "799",
-//     "image1": "https://images.bewakoof.com/t540/gotham-city-half-sleeve-t-shirt-463719-1641536986-1.jpg",
-//     "image2": "https://images.bewakoof.com/t540/gotham-city-half-sleeve-t-shirt-463719-1641536989-2.jpg",
-//     "image3": "https://images.bewakoof.com/t540/gotham-city-half-sleeve-t-shirt-463719-1641536993-3.jpg",
-//     "image4": "https://images.bewakoof.com/t540/gotham-city-half-sleeve-t-shirt-463719-1641536986-1.jpg",
-//     "image5": "https://images.bewakoof.com/t540/gotham-city-half-sleeve-t-shirt-463719-1641536989-2.jpg",
-//     "desc": "Regular fit - Fits just right - not too tight, not too loose.Single Jersey, 100% Cotton Classic, lightweight jersey fabric comprising 100% cotton.",
-//     "tribe": " ₹50",
-//     "discount": "50"
-// }
+    // {
+    //     "id": "HST8",
+    //     "name": "Gotham City Half Sleeve T-shirt",
+    //     "price": "799",
+    //     "image1": "https://images.bewakoof.com/t540/gotham-city-half-sleeve-t-shirt-463719-1641536986-1.jpg",
+    //     "image2": "https://images.bewakoof.com/t540/gotham-city-half-sleeve-t-shirt-463719-1641536989-2.jpg",
+    //     "image3": "https://images.bewakoof.com/t540/gotham-city-half-sleeve-t-shirt-463719-1641536993-3.jpg",
+    //     "image4": "https://images.bewakoof.com/t540/gotham-city-half-sleeve-t-shirt-463719-1641536986-1.jpg",
+    //     "image5": "https://images.bewakoof.com/t540/gotham-city-half-sleeve-t-shirt-463719-1641536989-2.jpg",
+    //     "desc": "Regular fit - Fits just right - not too tight, not too loose.Single Jersey, 100% Cotton Classic, lightweight jersey fabric comprising 100% cotton.",
+    //     "tribe": " ₹50",
+    //     "discount": "50"
+    // }
 
 
     // localStorage.setItem("bewkoof_wishlist", JSON.stringify(obj));
@@ -1281,7 +1283,7 @@ localStorage.setItem("flag", JSON.stringify(flag));
             var wishlistContainer = document.getElementById("wishlist-container");
             var wishlistProduct = document.createElement("div");
             wishlistProduct.id = "wishlist-product";
-            var subTotalPrice =  Math.floor(Number(elem.price) - (Number(elem.discount)/100)*elem.price);
+            var subTotalPrice = Math.floor(Number(elem.price) - (Number(elem.discount) / 100) * elem.price);
             // wishlistProduct.innerHTML=`
 
             //         <img src=${elem.image1} alt="">
@@ -1390,23 +1392,23 @@ localStorage.setItem("flag", JSON.stringify(flag));
         window.location.href = "./ordersummary.html"
     })
 
-    function home_button(){
-            localStorage.setItem("address_location", JSON.stringify("HOME"));
-        }    
-        
-    function office_button(){
-            localStorage.setItem("address_location", JSON.stringify("OFFICE"));
-        }    
-        
-    function others_button(){
-            localStorage.setItem("address_location", JSON.stringify("OTHER"));
-        } 
-        
-        
-        var customer_data = JSON.parse(localStorage.getItem("customer_whole_data"));
-        var email = customer_data.email_input;
+    function home_button() {
+        localStorage.setItem("address_location", JSON.stringify("HOME"));
+    }
 
-        document.getElementById("logedin-email").textContent = email;
+    function office_button() {
+        localStorage.setItem("address_location", JSON.stringify("OFFICE"));
+    }
+
+    function others_button() {
+        localStorage.setItem("address_location", JSON.stringify("OTHER"));
+    }
+
+
+    var customer_data = JSON.parse(localStorage.getItem("customer_whole_data"));
+    var email = customer_data.email_input;
+
+    document.getElementById("logedin-email").textContent = email;
 
 </script>
 
