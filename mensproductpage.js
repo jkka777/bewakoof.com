@@ -18,3 +18,13 @@ rate.textContent = product.price;
 let mrp = document.querySelector("h5")
 mrp.textContent = product.striked_off_price;
 mrp.style.textDecoration = "line-through";
+
+let cart_mens = JSON.parse(localStorage.getItem("bewakoof_cart")) || [];
+
+let addToCart = () => {
+
+    localStorage.setItem('bewakoof_cart', JSON.stringify(cart_mens));
+    console.log(product)
+}
+
+document.querySelector('.cart>div:nth-child(1)').addEventListener('click', addToCart);
