@@ -1,5 +1,11 @@
 
 <h1>bewakoof.com clone</h1>
+<p>A Collaborative project by a team of 5 members </p>
+<p>Manish</p>
+<p>Kishore</p>
+<p>Sagar</p>
+<p>Gopal</p>
+<p>Rittik</p>
 
 <h4>bewakoof.com is an online shopping website where one can shop for clothes and accessories for men and women. This clone has the features of SignUp, Login, Shop Mens clothes, Shop Womens clothes and Add to cart functationality, Payments</h4>
 
